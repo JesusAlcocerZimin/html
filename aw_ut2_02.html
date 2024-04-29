@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Segunda página</title>
+        <style type="text/css">
+            td.icon-1 {height: 140px;width: 140px;}
+            td.icon-2 {height: 144px;width: 422px;}
+            img.img-1 {height: 100%;width: 100%;}
+            img.img-2 {height: 100%;width: 33%;}
+            .text {vertical-align: text-top;width: 150px;}
+        </style>
+    </head>
+    <body>
+        <h1 id="inicio">Top campeones favoritos y diccionario del lol</h1>
+        <hr>
+        <h2>Top campeones favoritos de mis 2 principales líneas</h2>
+        <!-- TABLA CON BORDES, CELDAS FUSIONADAS E IMÁGENES -->
+        <table border="2" cellpadding="6" cellspacing="0">
+            <tr>
+                <th>Línea</th>
+                <th>Campeones</th>
+                <th>Opiniones</th>
+            </tr>
+            <tr>
+                <td class="icon-1"><img src="imagenes/mid.png" alt="mid" title="Mid" class="img-1"></td> <!-- IMÁGENES -->
+                <td class="icon-2"><img src="imagenes/Vladimir.jpg" alt="vladimir" title="vladimir" class="img-2"><img src="imagenes/Zoe.jpg" alt="zoe" title="zoe" class="img-2"><img src="imagenes/Akali.jpg" alt="akali" title="akali" class="img-2"></td> <!-- IMÁGENES -->
+                <td class="text" rowspan="2">La línea de ADC lleva ya varios años en los que no influye mucho en el resultado de la partida, puedes ir 20/0 que te viene cualquiera te deletea y terminas la partida en pantalla gris. <br>
+                Sin embargo, con muchos campeones de MID pasa lo contrario, por ejemplo con Yasuo que va 0/20 te tira la Q + R y se marca un 1vs5</td> <!-- CELDAS FUSIONADAS -->
+            </tr>
+            <tr>
+                <td class="icon-1"><img src="imagenes/adc.png" alt="adc" title="Adc" class="img-1"></td>
+                <td class="icon-2"><img src="imagenes/Draven.jpg" alt="draven" title="draven" class="img-2"><img src="imagenes/Xayah.jpg" alt="xayah" title="xayah" class="img-2"><img src="imagenes/Vayne.jpg" alt="vayne" title="vayne" class="img-2"></td>
+            </tr>
+        </table>
+        <br><br><br><br>
+        <h2>Términos y definiciones</h2>        
+        <a href="#AD">AD</a>&nbsp;&nbsp;<a href="#AP">AP</a>&nbsp;&nbsp;<a href="#Backdoor">Backdoor</a>&nbsp;&nbsp;<a href="#Buff">Buff</a>&nbsp;&nbsp;<a href="#Counter">Counter</a>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- LISTA DE DEFINICIÓN -->
+        <dl>
+            <dt id="AD">AD</dt>
+            <dd>Siglas que hacen referencia a Atack damage, utilizado para referirse a la estadística de daño físico de los campeones.</dd>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <dt id="AP">AP</dt>
+            <dd>Siglas que hacen referencia a Ability power, utilizado para referirse a la capacidad de daño mágico de los campeones.</dd>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <dt id="Backdoor">BackdOor</dt>
+            <dd>En inglés significa puerta trasera. Hace referencia a una forma de acabar la partida que consiste en asaltar la base enemiga (generalmente con el nexo al descubierto) sin que se percante hasta que sea demasiado tarde.</dd>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <dt id="Buff">Buff</dt>
+            <dd>Mejoras que reciben los campeones. En los parches hace referencia a un aumento de poder, mientras que en partida se utiliza para hablar de las mejoras que ofrecen los campamentos de la jungla, barones, dragones o incluso pasivas de las objetos y habilidades.</dd>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <dt id="Counter">Counter</dt>
+            <dd>Palabra utilizada para designar a los campeones que sirven para contrarrestar a un determinado personaje.</dd>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </dl>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2>Mapa de imagen de 3 jugadores de lol</h2>
+        <img src="imagenes/mapaImagen.png" alt="MAPA IMAGEN LOL" usemap="#formas" />
+        <!-- MAPA DE IMAGEN -->
+        <map name="formas" id="formas">
+            <!-- Poner enlace de Faker -->
+            <area shape="rect" coords="23,33,294,306" href="https://youtu.be/NolHvXjZA4A?t=217" target="_blank" alt="Faker" title="Faker" />
+            <!-- Poner enlace de Gumayusi -->
+            <area shape="circle" coords="442,168,136" href="https://youtu.be/kFcx4AP11Sk?t=176" target="_blank" alt="Gumayusi" title="Gumayusi" />
+            <!-- Poner enlace de Keria -->
+            <area shape="poly" coords="696,50,832,282,559,282" href="https://youtu.be/nGEPqmlhzUE?t=409" target="_blank" alt="Keria"  title="Keria" />
+        </map><br>
+        <!-- ENLACES AL PRIMER Y TERCER DOCUMENTO -->
+        <a href="index.html" style="color: #ef0707c4;"><strong>Enlace al primer documento.</strong></a><br>
+        <a href="aw_ut2_03.html" style="color: #ef0707c4;"><strong>Enlace al tercer documento.</strong></a>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tercer Documento</title>
+    </head>
+    <body>
+        <!-- FORMULARIO -->
+        <h1>Formulario de Riot Games</h1>
+        <form action="respuestaFormulario.html" method="post" enctype="multipart/form-data" autocomplete="on">
+            <input type="hidden" name="pais" value="España">  <!-- HIDDEN -->
+            <input type="text" name="lol" value="League Of Legends" readonly="readonly"> <!-- READONLY -->
+            <fieldset> <!-- FIELDSET -->
+                <legend>Datos personales</legend> <!-- LEGEND -->
+
+                <label for="nombre"><strong>Nombre completo: </strong></label> <!-- NOMBRE COMPLETO -->
+                <input type="text" name="nombre" id="nombre" tabindex="1" required> <!-- TABINDEX Y REQUIRED --> <!-- INPUT TIPO TEXT -->
+
+                <label for="invocador"><strong>Nombre de invocador: </strong></label> <!-- NOMBRE INVOCADOR -->
+                <input type="text" name="invocador" id="invocador" placeholder="Ej: DravenEsBonk" pattern="[A-Za-z0-9]{5,16}" tabindex="2" required> <!-- PLACEHOLDER Y PATTERN -->
+
+                <label for="tag"><strong>Tag: </strong></label> <!-- TAG -->
+                <input type="text" name="tag" id="tag" placeholder="Ej: #AA00" pattern="^#[A-Za-z0-9]{3,4}$" minlength="4" maxlength="5" tabindex="3" required="required"><br><br> <!-- PLACEHOLDER Y PATTERN Y MAXLENGHT -->
+
+                <label for="correo"><strong>Correo electrónico: </strong></label> <!-- CORREO -->
+                <input type="email" name="correo" id="correo" tabindex="4" required>
+
+                <label for="contraseña"><strong>Contraseña: </strong></label>
+                <input type="password" id="contraseña" tabindex="5" required>
+                <small id="passwordError" style="display:none; color:red;">La contraseña debe tener 12 caracteres, con al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.</small>
+                <script>
+                document.getElementById('contraseña').onchange = function() {
+                  var pass = document.getElementById('contraseña').value;
+                  var error = document.getElementById('passwordError');
+                  var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{12,}$/;
+                  if (!regex.test(pass)) {
+                    error.style.display = 'block';
+                  } else {
+                    error.style.display = 'none';
+                  }
+                };
+                </script>
+
+                <label for="servidor"><strong>Servidor: </strong></label>
+                <input type="text" name="servidor" id="servidor" placeholder="EUW" tabindex="6" required>
+                <input type="button" value="Ver servidores" onclick="javascript:alert('Europa del Oeste = EUW\nEuropa del Este = EUNE\nRusia = RU\nTurquía = TR\nNorteamérica = NA\nLatinoamérica Norte = LAN\nLatinoamérica Sur = LAS\nBrasil = BR\nJapón = JP\nOceanía = OCE\nCorea = KR\nBeta Pública = PBE')">
+            </fieldset>
+            <fieldset>
+                <legend>Cuestionario del lol</legend>
+                <table border="0" cellpadding="5">
+                    <tr>
+                        <td><!-- RADIO -->
+                            <label for="posicion">¿Cual es la posición que más juegas?</label><br>
+                            <input type="radio" name="posicion" value="top" tabindex="7" required>Top<br>
+                            <input type="radio" name="posicion" value="mid" required>Mid<br>
+                            <input type="radio" name="posicion" value="jg" required>Jg<br>
+                            <input type="radio" name="posicion" value="adc" required>Adc<br>
+                            <input type="radio" name="posicion" value="supp" required>Supp<br>
+                        </td>
+                        <td>
+                            <label for="jugadores">Marca los jugadores que conozcas</label><br>
+                            <!-- SELECT MULTIPLE -->
+                            <select name="jugadores" multiple size="5" tabindex="8">
+                                <option value="faker">Faker</option>
+                                <option value="gumayusi" tabindex="10">Gumayusi</option>
+                                <option value="keria" tabindex="11">Keria</option>
+                                <option value="josedeodo" tabindex="12">Josedeodo</option>
+                                <option value="nissaxter" tabindex="13">Nissaxter</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="rework">¿Qué campeón quieres que reciba el próximo rework?</label><br>
+                            <!-- SELECT NORMAL -->
+                            <select size="5" tabindex="14">
+                                <option name="rework" value="malphite" tabindex="15" required>Malphite</option>
+                                <option name="rework" value="aatrox" tabindex="16" required>Aatrox</option>
+                                <option name="rework" value="shaco" tabindex="17" required>Shaco</option>
+                                <option name="rework" value="sion" tabindex="18" required>Sion</option>
+                                <option name="rework" value="veigar" tabindex="19" required>Veigar</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="news">Marca las casillas si deseas:</label><br> <!-- CHECKBOX -->
+                            <input type="checkbox" name="news" value="nuevosPROYECTOS" tabindex="20">Que te mantengamos al día mediante notificaciones de nuevas actualizaciones.<br>
+                            <input type="checkbox" name="news" value="nuevosFORMULARIOS" tabindex="21">Recibir más formularios como este en el futuro.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="musica">¿Qué opinas de la primera canción de <em><strong>HEARTSTEEL</strong></em>?</label><br>
+                            <textarea name="musica" id="musica" cols="40" rows="15" placeholder='Presiona "Alt + a" o "Ctrl + Alt + a" para escuchar la nueva canción'></textarea> <!-- TEXTAREA -->
+                            <a href="https://www.youtube.com/watch?v=TdO0LBITIok" accesskey="a" target="_blank"></a> <!-- ACCESSKEY -->
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <input type="submit" value="Enviar formulario"> <!-- BOTON DE ENVIAR FORMULARIO -->
+            <input type="reset" value="Reiniciar formulario"> <!-- BOTON DE REINICIAR FORMULARIO -->
+        </form>
+        <a href="index.html">
+            <img src="imagenes/1.jpg">
+        </a>
+        <a href="aw_ut2_02.html">
+            <img src="imagenes/2.jpeg">
+        </a>
+    </body>
+</html>
